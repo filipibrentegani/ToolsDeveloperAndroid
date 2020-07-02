@@ -3,6 +3,7 @@ package com.filipibrentegani.toolsdeveloperandroid
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -23,5 +24,27 @@ class MainActivity : AppCompatActivity() {
         leak_button.setOnClickListener {
             startActivity(Intent(this, LeakActivity::class.java))
         }
+        debug_button.setOnClickListener {
+            anyProcess()
+        }
     }
+
+    fun anyProcess() {
+        for (i in 0..10) {
+            if (i%2==0) {
+                evenNumber(i) //par
+            } else {
+                oddNumber(i) //impar
+            }
+        }
+    }
+
+    fun evenNumber(number: Int){
+        Log.i("Filipix", "Número par: $number")
+    }
+
+    fun oddNumber(number: Int){
+        Log.i("Filipix", "Número impar: $number")
+    }
+
 }

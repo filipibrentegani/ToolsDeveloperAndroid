@@ -35,7 +35,7 @@ class ShowLayoutBoundsDemonstrationActivity : AppCompatActivity() {
                 .setDuration(1500)
                 .setListener(object : AnimatorListenerAdapter() {
                     override fun onAnimationEnd(animation: Animator) {
-                        button2.visibility = View.GONE
+//                        button2.visibility = View.GONE
                     }
                 })
         }

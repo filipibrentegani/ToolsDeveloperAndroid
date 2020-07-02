@@ -28,4 +28,11 @@
         android:text="LeakCanary Example"
         app:layout_constraintTop_toBottomOf="@id/dont_keep_activities_button"/>
 
+    <Button
+        android:id="@+id/debug_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Debug Example"
+        app:layout_constraintTop_toBottomOf="@id/leak_button"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
