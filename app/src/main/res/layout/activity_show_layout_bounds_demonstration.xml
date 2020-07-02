@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/constraint_root_view"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ShowLayoutBoundsDemonstrationActivity">
+
+    <TextView
+        android:id="@+id/text_view_left"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Hello World view esquerda!"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_view_right"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Hello World view direita!"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_view_example"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/text_view_left"
+        app:layout_constraintEnd_toStartOf="@id/text_view_right"/>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:text="b1"
+        app:layout_constraintTop_toBottomOf="@id/text_view_left"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/text_view_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toEndOf="@id/button"
+        app:layout_constraintTop_toTopOf="@id/button"
+        app:layout_constraintBottom_toBottomOf="@id/button"
+        android:text="Eu estou ancorada no botão 1!!!"/>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:text="b2"
+        app:layout_constraintTop_toBottomOf="@id/button"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/text_view_button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toEndOf="@id/button2"
+        app:layout_constraintTop_toTopOf="@id/button2"
+        app:layout_constraintBottom_toBottomOf="@id/button2"
+        android:text="Eu estou ancorada no botão 2!!!"/>
+
+    <TextView
+        android:id="@+id/text_view_button2_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@id/button2"
+        app:layout_constraintTop_toBottomOf="@id/button2"
+        android:text="Eu estou ancorada na base do botão 2!!!"/>
+
+    <TextView
+        android:id="@+id/text_view_middle1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sou um TextView MatchParent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/text_view_middle2"/>
+
+    <TextView
+        android:id="@+id/text_view_middle2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sou um TextView wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/text_view_middle1"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
